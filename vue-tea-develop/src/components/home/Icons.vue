@@ -11,36 +11,45 @@
 
 <script>
 export default {
+    props:{
+        iconList:{
+            type:Array
+        }
+    },
     data() {
         return {
-            iconList:[
-                {
-                    imgUrl:'./images/icons1.png',
-                    title:'自饮茶'
-                },
-                {
-                    imgUrl:'./images/icons2.png',
-                    title:'茶具'
-                },
-                {
-                    imgUrl:'./images/icons3.png',
-                    title:'茶礼盒'
-                },
-                {
-                    imgUrl:'./images/icons4.png',
-                    title:'领福利'
-                },
-                {
-                    imgUrl:'./images/icons5.png',
-                    title:'官方验证'
-                }
-            ]
+            // iconList:[
+            //     {
+            //         imgUrl:'./images/icons1.png',
+            //         title:'自饮茶'
+            //     },
+            //     {
+            //         imgUrl:'./images/icons2.png',
+            //         title:'茶具'
+            //     },
+            //     {
+            //         imgUrl:'./images/icons3.png',
+            //         title:'茶礼盒'
+            //     },
+            //     {
+            //         imgUrl:'./images/icons4.png',
+            //         title:'领福利'
+            //     },
+            //     {
+            //         imgUrl:'./images/icons5.png',
+            //         title:'官方验证'
+            //     }
+            // ]
         }
     },
 }
 </script>
 
 <style scoped>
+img{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
 .icon {
     background-color: white;
 }

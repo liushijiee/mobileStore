@@ -22,26 +22,26 @@ export default {
                 {
                     title: '首页',
                     path: '/home',
-                    active: './images/home.png',
-                    selected: './images/home-filling.png'
+                    active: '/images/home.png',
+                    selected: '/images/home-select.png'
                 },
                 {
                     title: '分类',
                     path: '/list',
-                    active: './images/home.png',
-                    selected: './images/home-filling.png'
+                    active: '/images/list.png',
+                    selected: '/images/list-select.png'
                 },
                 {
                     title: '购物车',
                     path: '/cart',
-                    active: './images/home.png',
-                    selected: './images/home-filling.png'
+                    active: '/images/cart.png',
+                    selected: '/images/cart-select.png'
                 },
                 {
                     title: '我的',
                     path: '/my',
-                    active: './images/home.png',
-                    selected: './images/home-filling.png'
+                    active: '/images/my.png',
+                    selected: '/images/my-select.png'
                 },
             ]
         }
@@ -49,13 +49,14 @@ export default {
     methods: {
         mySwitch(path){
             if(this.$router.path == path) return
-
+            
             this.$router.replace(path)
         }
     },
+    
 }
 </script>
-<style>
+<style scoped>
     img{
         width: 0.7rem;
         height: 0.7rem;

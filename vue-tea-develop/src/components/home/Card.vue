@@ -16,9 +16,14 @@ export default {
 <style scoped>
 .card {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 0.5rem 0;
+    /* padding: 0.5rem 0; */
     position: relative;
+    height: 1.5rem;
+    margin-bottom: 0.15rem;
 }
 .title {
     font-size: 0.5rem;
@@ -32,7 +37,7 @@ export default {
     content: '';
     position: absolute;
     border-radius: 50%;
-    top: 0.76rem;
+    top: 0.75rem;
     right: 35%;
 }
 .card::before{
@@ -42,7 +47,7 @@ export default {
     content: '';
     position: absolute;
     border-radius: 50%;
-    top: 0.76rem;
+    top: 0.75rem;
     left: 35%;
 }
 </style>

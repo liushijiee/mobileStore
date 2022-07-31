@@ -10,8 +10,10 @@
                 <img :src="item.imgUrl" alt="">
             </div>
             <div class="right">
-                <span style="font-weight:bold">{{item.name}}</span><br>
-                <span>{{item.content}}</span><br>
+                <div>
+                    <span style="font-weight:bold">{{item.name}}</span><br>
+                    <span>{{item.content}}</span>
+                </div>
                 <div class='price'>
                     <span style="font-weight:bold">￥</span>
                     <span style="font-weight:bold;color:red">{{item.price}}</span>
@@ -26,27 +28,32 @@
 <script>
 import Card from './Card.vue'
 export default {
+    props:{
+        recommendList:{
+            type:Array
+        }
+    },
     components:{
         Card
     },
     data() {
         return {
-            recommendList:[
-                {
-                    id:1,
-                    name:'龙井1号铁罐250g',
-                    content:'鲜爽甘醇 口粮首选',
-                    price:'68',
-                    imgUrl:'./images/recommend.jpeg'
-                },
-                {
-                    id:2,
-                    name:'龙井1号铁罐250g',
-                    content:'鲜爽甘醇 口粮首选',
-                    price:'68',
-                    imgUrl:'./images/recommend.jpeg'
-                }
-            ]
+            // recommendList:[
+            //     {
+            //         id:1,
+            //         name:'龙井1号铁罐250g',
+            //         content:'鲜爽甘醇 口粮首选',
+            //         price:'68',
+            //         imgUrl:'./images/recommend.jpeg'
+            //     },
+            //     {
+            //         id:2,
+            //         name:'龙井1号铁罐250g',
+            //         content:'鲜爽甘醇 口粮首选',
+            //         price:'68',
+            //         imgUrl:'./images/recommend.jpeg'
+            //     }
+            // ]
         }
     },
 }
@@ -55,7 +62,7 @@ export default {
 <style scoped>
 img {
     width: 100% !important;
-    height: 100%;
+    height: 4rem;
 }
 li {
     position: relative;
@@ -66,10 +73,15 @@ li {
     right: 1.5rem;
     width: 2.7rem;
     height: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.3rem;
 }
-.price {
+/* .price {
     position: absolute;
     bottom: 0;
     right: 0.1rem;
-}
+} */
 </style>

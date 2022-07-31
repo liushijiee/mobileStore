@@ -1,8 +1,9 @@
 <template>
   <header>
     <div class="title">My Tea</div>
-    <div class="input">
-        <input type="text" style="width:100%;height:0.5rem;border-radius:0.3rem;text-indent:1em">
+    <div class="search" @click="goSearch">
+        <i class="iconfont icon-sousuo"></i>
+        <input type="text" class='input' style="width:100%;height:0.5rem;border-radius:0.3rem;text-indent:1em">
     </div>
     <div class='kefu'>
         <img src="@/assets/images/客服.png" alt="">
@@ -13,6 +14,11 @@
 <script>
 export default {
 
+methods: {
+    goSearch(){
+        this.$router.push('/search')
+    }
+},
 }
 </script>
 
@@ -20,6 +26,10 @@ export default {
 /* div {
     width: 50rem
 } */
+img{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
 header{
     position: fixed;
     top: 0;
@@ -36,9 +46,26 @@ header{
     font-size:0.6rem;
     flex:2
 }
+.search {
+    flex: 4;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
 .input{
-    flex: 4
+    
+    border-radius: 0.3rem;
+    text-indent: 0.8rem;
+    height: 0.6rem;
+    width: 100%;
 
+}
+
+.icon-sousuo {
+    position: absolute;
+    left: 0.2rem;
 }
 
 .input{

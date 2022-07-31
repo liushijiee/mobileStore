@@ -1,11 +1,23 @@
 let path = require('path')
 module.exports = {
+  publicPath:'/',
   pages: {
     index: {
       // page 的入口
       entry: 'src/main.js'
     }
 
+  },
+  devServer:{
+    proxy:{
+      'api':{
+        target:'http://localhost:3000',
+        changeOrigin:true,
+        pathRewrite:{
+          '^api':'/api'
+        }
+      }
+    }
   },
   lintOnSave: false,//关闭语法检查
   // devServer: {
